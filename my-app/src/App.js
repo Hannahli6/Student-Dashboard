@@ -8,8 +8,6 @@ function App() {
     <div className="App">
       <div className="dashboard">
         <Nav />
-
-        {/* grid */}
         <div className="grid">
           <div className="calendar widgets">
             <span>hello</span>
@@ -23,7 +21,6 @@ function App() {
           <div className="todo widgets"></div>
           <div className="icons widgets"></div>
           <Video></Video>
-          {/* <div className="timer widgets"></div> */}
           <Timer></Timer>
           <div className="task widgets"></div>
         </div>

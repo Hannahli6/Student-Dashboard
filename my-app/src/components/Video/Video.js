@@ -21,7 +21,7 @@ const Video = () => {
       <div className="video-wrapper">
         <iframe
           width="100%"
-          height="340px"
+          height="100%"
           src={link}
           title="YouTube video player"
           frameBorder="0"

@@ -1,20 +1,37 @@
 import "./Timer.css";
 import { useTimer } from "react-timer-hook";
+import React, { useEffect, useState } from "react";
 
 const Timer = () => {
-  
+  // const [time, setTime] = useState(new Date());
   const time = new Date();
-  time.setSeconds(time.getSeconds() + (60*10)); // 10 minutes timer
+  const [random, setRandom] = useState(10);
+
+  time.setSeconds(time.getSeconds() + 60*random)
+
+  const onSetTime = (e) => {
+    setRandom(e.target.value);
+  };
+
   return (
     <div className="timer widgets">
-      <MyTimer expiryTimestamp={time} />
+      <input
+        className="timer-input"
+        type="number"
+        min="1"
+        max="100"
+        placeholder="5"
+        value={random}
+        onChange={onSetTime}
+      />
+      <MyTimer expiryTimestamp={time} key={random} minute={random}/>
     </div>
   );
 };
 
 export default Timer;
 
-function MyTimer({ expiryTimestamp }) {
+function MyTimer({ expiryTimestamp, minute }) {
   const {
     seconds,
     minutes,
@@ -28,30 +45,31 @@ function MyTimer({ expiryTimestamp }) {
   } = useTimer({
     expiryTimestamp,
     onExpire: () => console.warn("onExpire called"),
+    autoStart: false,
   });
 
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>Timer</h1>
-      <div style={{ fontSize: "20px" }}>
+      <h1>Pomodoro Timer</h1>
+      <div style={{ fontSize: "40px" }}>
         <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:
         <span>{seconds}</span>
       </div>
-      <p>{isRunning ? "Running" : "Not running"}</p>
-      <button onClick={start}>Start</button>
-      <button onClick={pause}>Pause</button>
-      <button onClick={resume}>Resume</button>
-      <button
-        onClick={() => {
-          // Restarts to 5 minutes timer
-          const time = new Date();
-          time.setSeconds(time.getSeconds() + (60*5));
-          restart(time);
-          pause();
-        }}
-      >
-        Restart
-      </button>
+      <div>
+        <button onClick={start}>Start</button>
+        <button onClick={pause}>Pause</button>
+        <button onClick={resume}>Resume</button>
+        <button
+          onClick={() => {
+            const time = new Date();
+            time.setSeconds(time.getSeconds() + 60 * minute);
+            restart(time);
+            pause();
+          }}
+        >
+          Restart
+        </button>
+      </div>
     </div>
   );
 }
