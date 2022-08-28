@@ -1,8 +1,31 @@
+ *, *::before, *::after {
+  box-sizing: border-box;  
+}
+
+:root {
+  --border-radius-component: 10px;
+  --border-radius-profile: 50px;
+  --dark: #474747;
+  --grey: #8B8F97;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: var(--dark);
+}
+
 .App {
   height: 100vh;
-  background-color: #d5dae4;
+  background-color: #D5DAE4;
+  font-family: 'Nunito', sans-serif;
 }
-.dashbaord {
+
+h2, h3 {
+  font-size: 1em;
+}
+
+.dashboard {
   background-color: white;
   position: relative;
   display: flex;
@@ -13,6 +36,7 @@
   margin: auto;
   border-radius: 40px;
 }
+
 .grid {
   /* edit the first margin value after the nav component is added in */
   margin: 150px 40px 40px 40px;
@@ -29,18 +53,19 @@
     "goal video music todo"
     "graph timer music todo";
 }
+
 .widgets{
   background-color: red;
   border-radius: 20px;
   box-sizing: border-box;
   padding: 40px;
 }
+
 .calendar {
   background-color: purple;
   grid-area: calendar;
   display: flex;
   flex-direction: column;
-
 }
 
 .goal {

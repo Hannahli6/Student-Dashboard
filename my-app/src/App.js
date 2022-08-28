@@ -5,6 +5,8 @@ function App() {
   return (
     <div className="App">
       <div className="dashbaord">
+        <Nav />
+
         {/* grid */}
         <div className="grid">
           <div className="calendar widgets">
@@ -28,3 +30,4 @@ function App() {
 }
 
 export default App;
+
