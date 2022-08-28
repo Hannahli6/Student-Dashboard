@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import TaskItem from '../TaskItem/TaskItem';
 import './Task.css';
 import { BsArrowRight } from 'react-icons/bs';
@@ -6,22 +7,35 @@ import { IconContext } from 'react-icons/lib';
 const Task = () => {
     const data = [
         {
-            task: 'Study for English test',
+            name: 'Study for English test',
             completed: true
         },
         {
-            task: 'Migrate Canva account to new email',
+            name: 'Migrate Canva account to new email',
             completed: false
         },
         {
-            task: 'Eat lunch',
+            name: 'Eat lunch',
             completed: false
         }
     ]
 
-    const magic = (event) => {
-        event.preventDefault();
-        console.log(event.target.todo.value);
+    const checkboxes = document.querySelectorAll('.taskitem-input')
+
+    const [tasks, setTasks] = useState(data) // initialize state for task list
+
+    // on form submit... run addItem
+    const addItem = (event) => {
+        event.preventDefault(); // prevent from reloading page
+
+        const inputAsObject = { // create a new task object based on user input
+            name: event.target.todo.value,
+            completed: false
+        }
+
+        setTasks(previousTask => [...previousTask, inputAsObject]) // setTasks = an array of the previous value (data) plus the new todo object
+
+        document.querySelector('.task-input').value = ''; //reset input value to the placeholder
     }   
 
     return ( 
@@ -30,12 +44,12 @@ const Task = () => {
 
             <div className='task-container'>
                 {
-                    data.map(item => <TaskItem task_name={item.task} />)
+                    tasks.map((item, index) => <TaskItem task={item} key={index} />) // update task list using state, renders taskitem component
                 }
             </div>
 
-            <form onSubmit={magic}>
-                <input className='task-input' name='todo' type='text' placeholder='Add a Todo...' />
+            <form onSubmit={addItem}>
+                <input className='task-input' name='todo' type='text' placeholder='Add an assignment...' />
                 <button className='task-button' type='submit'>
                     <IconContext.Provider value={{size: '1.5em'}}>
                         <BsArrowRight />
