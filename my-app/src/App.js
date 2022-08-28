@@ -2,6 +2,7 @@ import "./App.css";
 import Nav from "./components/Nav/Nav";
 import Video from "./components/Video/Video";
 import Music from "./components/Music/Music";
+import Icons from "./components/Icons/Icons";
 import Timer from "./components/Timer/Timer";
 
 function App() {
@@ -18,9 +19,9 @@ function App() {
           </div>
           <div className="goal widgets"></div>
           <div className="graph widgets"></div>
-          <Music className="music widgets" />
+          <Music />
           <div className="todo widgets"></div>
-          <div className="icons widgets"></div>
+          <Icons />
           <Video></Video>
           <Timer></Timer>
           <div className="task widgets"></div>
