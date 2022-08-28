@@ -1,15 +1,23 @@
+import { useState, useEffect } from 'react';
 import './Nav.css'
 const Nav = () => {
-  const date = new Date(); // create new Date object
-  const dateWithoutSeconds = date.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}) // gets rid of seconds in date (original format: 06:05:45 PM -> 06:05 PM)
-  const dateInWords = date.toLocaleDateString([], {year: 'numeric', month: 'long', day: 'numeric'}) // gets the date in words
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  const refresh = () => setCurrentTime(new Date()); // when function is run, change state to the new Date
+
+  useEffect(() => {
+    const updateNow = setInterval(refresh, 1000); 
+    return () => { 
+      clearInterval(updateNow) 
+    }
+  }, []);
 
   return (
     <div id='nav'>
       <h1>🍳Welcome, Hannah!</h1>
 
       <div className='nav-right-side'>
-        <h2 className='nav-date-time'>{dateWithoutSeconds} | {dateInWords}</h2>
+        <h2 className='nav-date-time'>{currentTime.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})} | {currentTime.toLocaleDateString([], {year: 'numeric', month: 'long', day: 'numeric'})}</h2>
 
         <div className='profile'>
           <h3>Hannah Li</h3>
