@@ -68,7 +68,7 @@ a:hover {
     "calendar video task notes"
     "goal video task notes"
     "goal timer music notes"
-    "user timer music notes";
+    "goal timer music notes";
 }
 
 .widgets {
@@ -112,10 +112,7 @@ a:hover {
   justify-content: center;
   background-color: #bcece9;
 }
-.user{
-  grid-area: user;
-  background-color: #9699d1;
-}
+
 .music {
   grid-area: music;
   background-color: #9699d1;
