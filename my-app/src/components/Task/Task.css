@@ -1,0 +1,49 @@
+.task {
+    padding: 1.25rem;
+}
+
+.task-title {
+    font-size: 1.875em;
+    margin: 0;
+}
+
+.task-container {
+    height: 60%;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+.task-input {
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+}
+
+.task-input:focus {
+    outline: none;
+    border: var(--grey) 1px solid;
+}
+
+.task-input:focus, .task-button {
+    border-radius: 5px;
+}
+
+.task-button {  
+    background-color: transparent;
+    padding: 0.25rem 1rem;
+    margin-left: 0.5rem;
+    border: var(--dark) 1px solid;
+}
+
+.task-button:hover {
+    background-color: var(--grey);
+}
