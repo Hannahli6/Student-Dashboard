@@ -1,1 +1,15 @@
-
+.App{
+  height: 100vh;
+  background-color: #D5DAE4;
+}
+.dashbaord{
+  background-color: white;
+  position: relative;
+  display: flex;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 88%;
+  min-height: 88%;
+  margin: auto;
+  border-radius: 40px;
+}
