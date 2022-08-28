@@ -20,8 +20,6 @@ const Task = () => {
         }
     ]
 
-    const checkboxes = document.querySelectorAll('.taskitem-input')
-
     const [tasks, setTasks] = useState(data) // initialize state for task list
 
     // on form submit... run addItem
