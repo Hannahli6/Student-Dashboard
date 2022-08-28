@@ -53,7 +53,6 @@ h2, h3 {
     "goal video music todo"
     "graph timer music todo";
 }
-
 .widgets{
   background-color: red;
   border-radius: 20px;
@@ -62,40 +61,56 @@ h2, h3 {
 }
 
 .calendar {
-  background-color: purple;
+  background-color: #9699d1;
   grid-area: calendar;
   display: flex;
   flex-direction: column;
 }
 
+/* move css into its own component css */
 .goal {
   grid-area: goal;
+  background-color: #bcece9;
 }
 
 .graph {
   grid-area: graph;
+  background-color: #f5b0b5;
 }
 
 .task {
   grid-area: task;
+  background-color: #9699d1;
 }
 
 .music {
   grid-area: music;
+  background-color: #9699d1;
 }
 
 .todo {
   grid-area: todo;
+  background-color: #9699d1;
 }
 
 .icons {
   grid-area: icons;
+  background-color: #bcece9;
 }
-
+/* 
 .video {
   grid-area: video;
+  background-color: #f5b0b5;
 }
+.video-wrapper {
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+} */
 
 .timer {
   grid-area: timer;
+  background-color: #9699d1;
 }

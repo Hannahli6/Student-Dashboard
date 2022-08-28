@@ -1,0 +1,11 @@
+.video {
+  grid-area: video;
+  background-color: #f5b0b5;
+}
+.video-wrapper {
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}

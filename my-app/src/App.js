@@ -1,10 +1,11 @@
 import "./App.css";
 import Nav from "./components/Nav/Nav";
+import Video from "./components/Video/Video";
 
 function App() {
   return (
     <div className="App">
-      <div className="dashbaord">
+      <div className="dashboard">
         <Nav />
 
         {/* grid */}
@@ -20,7 +21,7 @@ function App() {
           <div className="music widgets"></div>
           <div className="todo widgets"></div>
           <div className="icons widgets"></div>
-          <div className="video widgets"></div>
+          <Video className="video widgets"></Video>
           <div className="timer widgets"></div>
           <div className="task widgets"></div>
         </div>
