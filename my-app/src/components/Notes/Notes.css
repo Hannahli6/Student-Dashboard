@@ -1,0 +1,10 @@
+.notes-container {
+    background-color: #fff;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.notes-input {
+    width: 100%;
+}
