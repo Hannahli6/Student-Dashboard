@@ -2,14 +2,13 @@ import "./App.css";
 import Nav from "./components/Nav/Nav";
 import Video from "./components/Video/Video";
 import Music from "./components/Music/Music";
+import Timer from "./components/Timer/Timer";
 
 function App() {
   return (
     <div className="App">
       <div className="dashboard">
         <Nav />
-
-        {/* grid */}
         <div className="grid">
           <div className="calendar widgets">
             <span>hello</span>
@@ -22,8 +21,8 @@ function App() {
           <Music className="music widgets" />
           <div className="todo widgets"></div>
           <div className="icons widgets"></div>
-          <Video className="video widgets"></Video>
-          <div className="timer widgets"></div>
+          <Video></Video>
+          <Timer></Timer>
           <div className="task widgets"></div>
         </div>
       </div>
