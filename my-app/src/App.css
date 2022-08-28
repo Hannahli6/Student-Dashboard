@@ -1,8 +1,8 @@
-.App{
+.App {
   height: 100vh;
-  background-color: #D5DAE4;
+  background-color: #d5dae4;
 }
-.dashbaord{
+.dashbaord {
   background-color: white;
   position: relative;
   display: flex;
@@ -12,4 +12,65 @@
   min-height: 88%;
   margin: auto;
   border-radius: 40px;
+}
+.grid {
+  /* edit the first margin value after the nav component is added in */
+  margin: 150px 40px 40px 40px;
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr 0.7fr 0.8fr;
+  grid-template-rows: 0.9fr 1.1fr 1fr 1fr;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "calendar video task icons"
+    "calendar video task todo"
+    "goal video music todo"
+    "graph timer music todo";
+}
+.widgets{
+  background-color: red;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 40px;
+}
+.calendar {
+  background-color: purple;
+  grid-area: calendar;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.goal {
+  grid-area: goal;
+}
+
+.graph {
+  grid-area: graph;
+}
+
+.task {
+  grid-area: task;
+}
+
+.music {
+  grid-area: music;
+}
+
+.todo {
+  grid-area: todo;
+}
+
+.icons {
+  grid-area: icons;
+}
+
+.video {
+  grid-area: video;
+}
+
+.timer {
+  grid-area: timer;
 }

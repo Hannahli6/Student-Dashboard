@@ -4,3 +4,7 @@ const Nav = () => {
 }
 
 export default Nav;
+
+// welcome message
+// date
+// user name 
