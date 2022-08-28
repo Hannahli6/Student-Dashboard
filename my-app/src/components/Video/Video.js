@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Video.css";
 const Video = () => {
-  const [link, setLink] = useState("https://www.youtube.com/embed/b1t41Q3xRM8");
+  const [link, setLink] = useState("https://www.youtube.com/embed/6o7b9yyhH7k");
   const [onChangeLink, setOnChnageLink] = useState();
 
   const onBtnClick = () => {
@@ -15,7 +15,7 @@ const Video = () => {
     var match = url.match(regExp);
     return match && match[7].length === 11 ? match[7] : false;
   }
-  
+
   return (
     <div className="video widgets">
       <div className="video-wrapper">
@@ -29,11 +29,15 @@ const Video = () => {
           allowFullScreen
         ></iframe>
       </div>
-      <input onChange={(e) => setOnChnageLink(e.target.value)} placeholder="Enter the Youtube URL"></input>
-      <button onClick={onBtnClick}>search</button>
+      <div className="video-paste-link">
+        <input
+          onChange={(e) => setOnChnageLink(e.target.value)}
+          placeholder="Enter the Youtube URL"
+        ></input>
+        <button onClick={onBtnClick}>search</button>
+      </div>
     </div>
   );
 };
 
 export default Video;
-

@@ -15,6 +15,7 @@ const Timer = () => {
 
   return (
     <div className="timer widgets">
+      <MyTimer expiryTimestamp={time} key={random} minute={random}/>
       <input
         className="timer-input"
         type="number"
@@ -24,7 +25,6 @@ const Timer = () => {
         value={random}
         onChange={onSetTime}
       />
-      <MyTimer expiryTimestamp={time} key={random} minute={random}/>
     </div>
   );
 };

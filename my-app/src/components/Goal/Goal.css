@@ -3,13 +3,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: scroll;
 }
 
 .goal-title {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.70rem;
   margin-top: 0;
 }
-
+.goal::-webkit-scrollbar { 
+  display: none; 
+}
 .goal h2{
   font-size: 20px;
   margin: 0;

@@ -3,13 +3,9 @@ import './TaskItem.css'
 const TaskItem = ({task}) => {
     const checkboxes = document.querySelectorAll('input[type=checkbox]')
 
-    console.log(checkboxes)
-
     checkboxes.forEach((checkbox, index) => {
         if (checkbox.checked) {
-            console.log('working', index)
         } else {
-            console.log('not clicked', index)
         }
     })
 

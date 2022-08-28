@@ -5,6 +5,7 @@
 .task-title {
     font-size: 1.875em;
     margin: 0;
+    margin-bottom: 15px;
 }
 
 .task-container {

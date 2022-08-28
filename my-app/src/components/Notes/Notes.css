@@ -3,13 +3,19 @@
     height: 100%;
     padding: 1rem;
     border-radius: 10px;
+    overflow: scroll;
 }
 
 .notes-input {
     resize: none;
     border: none;
     width: 100%;
+    height: 70%;
+    padding: 10px;
+    font-family: "Nunito", sans-serif;
+    
 }
+
 
 .notes-input:focus {
     outline: none;
