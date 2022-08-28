@@ -14,7 +14,7 @@ const Nav = () => {
 
   return (
     <div id='nav'>
-      <h1>🍳Welcome,Jane!</h1>
+      <h1>🍳Welcome, Jane!</h1>
 
       <div className='nav-right-side'>
         <h2 className='nav-date-time'>{currentTime.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})} | {currentTime.toLocaleDateString([], {year: 'numeric', month: 'long', day: 'numeric'})}</h2>
