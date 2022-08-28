@@ -1,6 +1,7 @@
 import "./App.css";
 import Nav from "./components/Nav/Nav";
 import Video from "./components/Video/Video";
+import Music from "./components/Music/Music";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           </div>
           <div className="goal widgets"></div>
           <div className="graph widgets"></div>
-          <div className="music widgets"></div>
+          <Music className="music widgets" />
           <div className="todo widgets"></div>
           <div className="icons widgets"></div>
           <Video className="video widgets"></Video>
