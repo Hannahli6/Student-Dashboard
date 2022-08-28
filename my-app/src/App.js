@@ -6,6 +6,8 @@ import Notes from "./components/Notes/Notes";
 import Icons from "./components/Icons/Icons";
 import Timer from "./components/Timer/Timer";
 import Task from "./components/Task/Task";
+import Calendar from "./components/Calendar/Calendar";
+import Goal from "./components/Goal/Goal";
 
 function App() {
   return (
@@ -13,14 +15,8 @@ function App() {
       <div className="dashboard">
         <Nav />
         <div className="grid">
-          <div className="calendar widgets">
-            <span>hello</span>
-            <span>hello</span>
-            <span>hello</span>
-            <span>hello</span>
-          </div>
-          <div className="goal widgets"></div>
-          <div className="graph widgets"></div>
+          <Calendar/>
+          <Goal/>
           <Music />
           <Notes />
           <Icons />
