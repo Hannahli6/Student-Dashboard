@@ -8,7 +8,7 @@ const Task = () => {
     const data = [
         {
             name: 'Study for English test',
-            completed: true
+            completed: false
         },
         {
             name: 'Migrate Canva account to new email',
