@@ -1,0 +1,45 @@
+.goal{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.goal h2{
+  font-size: 20px;
+  margin: 0;
+}
+.goals-wrapper{
+  width: 100%;
+}
+.goal-text-wrapper{
+  width: 90%;
+  margin-top: 20px;
+  
+}
+.goal-text-wrapper p {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.goal-text-wrapper input{
+  width: 100%;
+  border-radius: 1em;
+  background: #7eb4ee;
+  border: none;
+  
+}
+.goal-text-wrapper input.styled-slider::-webkit-slider-thumb {
+  width: 0;
+  height: 2em;
+  visibility: hidden;
+}
+
+
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+

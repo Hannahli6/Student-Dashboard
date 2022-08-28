@@ -29,7 +29,7 @@ const Video = () => {
           allowFullScreen
         ></iframe>
       </div>
-      <input onChange={(e) => setOnChnageLink(e.target.value)}></input>
+      <input onChange={(e) => setOnChnageLink(e.target.value)} placeholder="Enter the Youtube URL"></input>
       <button onClick={onBtnClick}>search</button>
     </div>
   );

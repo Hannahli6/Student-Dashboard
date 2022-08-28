@@ -54,6 +54,7 @@ a:hover {
 }
 
 .grid {
+  overflow: scroll;
   box-sizing: border-box;
   padding: 3rem;
   height: 90%;
@@ -66,7 +67,7 @@ a:hover {
     "calendar video task icons"
     "calendar video task notes"
     "goal timer music notes"
-    "graph timer music notes";
+    "goal timer music notes";
 }
 
 .widgets {
@@ -87,10 +88,6 @@ a:hover {
   background-color: #bcece9;
 }
 
-.graph {
-  grid-area: graph;
-  background-color: #f5b0b5;
-}
 
 .task {
   grid-area: task;
