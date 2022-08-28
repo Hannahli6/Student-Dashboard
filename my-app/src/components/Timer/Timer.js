@@ -37,7 +37,6 @@ function MyTimer({ expiryTimestamp, minute }) {
     minutes,
     hours,
     days,
-    isRunning,
     start,
     pause,
     resume,
