@@ -42,6 +42,10 @@ a:hover {
   color: var(--grey);
 }
 
+textarea {
+  font-family: "Nunito", sans-serif;
+}
+
 .dashboard {
   background-color: white;
   position: relative;
