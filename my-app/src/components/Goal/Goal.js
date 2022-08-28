@@ -3,14 +3,20 @@ import "./Goal.css";
 const Goal = () => {
   return (
     <div className="goal widgets">
-      <h2>Goal</h2>
+      <h1 className='goal-title'>Goals</h1>
       <div className="goals-wrapper">
         <div className="goal-text-wrapper">
-          <p contentEditable="true" >Complete the Fullstack Course</p>
+          <textarea className="goal-text">Complete the Fullstack Course</textarea>
           <input type="range" className="styled-slider slider-progress"/>
         </div>
+        
         <div className="goal-text-wrapper">
-          <p contentEditable="true" >Complete the Fullstack Course</p>
+          <textarea className="goal-text">Complete the Fullstack Course</textarea>
+          <input type="range" className="styled-slider slider-progress"/>
+        </div>
+
+        <div className="goal-text-wrapper">
+          <textarea className="goal-text">Complete the Fullstack Course</textarea>
           <input type="range" className="styled-slider slider-progress"/>
         </div>
       </div>
