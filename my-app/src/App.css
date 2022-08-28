@@ -29,6 +29,15 @@ h3 {
   font-size: 1em;
 }
 
+a {
+  color: inherit;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--grey);
+}
+
 .dashboard {
   background-color: white;
   position: relative;
@@ -59,7 +68,6 @@ h3 {
 .widgets {
   background-color: red;
   border-radius: 20px;
-  box-sizing: border-box;
 }
 
 .calendar {
@@ -97,5 +105,8 @@ h3 {
 
 .icons {
   grid-area: icons;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #bcece9;
 }
