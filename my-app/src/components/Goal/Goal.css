@@ -3,7 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
+.goal-title {
+  margin-bottom: 0.25rem;
+  margin-top: 0;
 }
 
 .goal h2{
@@ -14,16 +18,24 @@
   width: 100%;
 }
 .goal-text-wrapper{
-  width: 90%;
-  margin-top: 20px;
-  
+  margin-bottom: 30px;
 }
-.goal-text-wrapper p {
-  width: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
+.goal-text {
+  border-radius: 10px;
+  resize: none;
+  border: none;
+  width: 100%;
+  height: 30px;
+  font-size: 1em;
+  text-align: center;
 }
+
+.goal-text:focus {
+  outline: none;
+  border: var(--grey) 1px solid;
+}
+
 .goal-text-wrapper input{
   width: 100%;
   border-radius: 1em;
