@@ -28,7 +28,6 @@ h2, h3 {
 .dashboard {
   background-color: white;
   position: relative;
-  display: flex;
   top: 50%;
   transform: translateY(-50%);
   max-width: 88%;
@@ -39,7 +38,7 @@ h2, h3 {
 
 .grid {
   /* edit the first margin value after the nav component is added in */
-  margin: 150px 40px 40px 40px;
+  padding: 3rem;
   position: relative;
   width: 100%;
   display: grid;
