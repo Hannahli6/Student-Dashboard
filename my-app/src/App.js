@@ -8,7 +8,6 @@ import Timer from "./components/Timer/Timer";
 import Task from "./components/Task/Task";
 import Calendar from "./components/Calendar/Calendar";
 import Goal from "./components/Goal/Goal";
-import Name from "./components/Name/Name";
 
 function App() {
   return (
@@ -17,8 +16,7 @@ function App() {
         <Nav />
         <div className="grid">
           <Calendar/>
-          <Goal/>
-          <Name/>
+          <Goal />
           <Music />
           <Notes />
           <Icons />
