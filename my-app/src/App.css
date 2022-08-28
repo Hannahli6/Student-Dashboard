@@ -60,14 +60,15 @@ a:hover {
   height: 90%;
   display: grid;
   grid-template-columns: 0.9fr 1.6fr 0.7fr 0.8fr;
-  grid-template-rows: 0.9fr 1.1fr 1fr 1fr;
+  grid-template-rows: 0.9fr 1.1fr 1fr 1fr 1fr;
   gap: 20px 20px;
   grid-auto-flow: row;
   grid-template-areas:
     "calendar video task icons"
     "calendar video task notes"
+    "goal video task notes"
     "goal timer music notes"
-    "goal timer music notes";
+    "user timer music notes";
 }
 
 .widgets {
@@ -78,8 +79,7 @@ a:hover {
 .calendar {
   background-color: #9699d1;
   grid-area: calendar;
-  display: flex;
-  flex-direction: column;
+
 }
 
 /* move css into its own component css */
@@ -111,4 +111,12 @@ a:hover {
   align-items: center;
   justify-content: center;
   background-color: #bcece9;
+}
+.user{
+  grid-area: user;
+  background-color: #9699d1;
+}
+.music {
+  grid-area: music;
+  background-color: #9699d1;
 }

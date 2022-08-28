@@ -51,7 +51,7 @@ function MyTimer({ expiryTimestamp, minute }) {
   return (
     <div style={{ textAlign: "center" }}>
       <h1>Pomodoro Timer</h1>
-      <div style={{ fontSize: "40px" }}>
+      <div className="time-text" style={{ fontSize: "40px" }}>
         <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:
         <span>{seconds}</span>
       </div>

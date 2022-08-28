@@ -1,0 +1,12 @@
+.calendar{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.date-picker{
+  background-color: white;
+  overflow-x: hidden;
+  width: 320px;
+  max-height: 368px;
+  border-radius: 10px;
+}
