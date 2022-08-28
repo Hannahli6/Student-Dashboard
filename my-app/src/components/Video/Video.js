@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./Video.css";
 const Video = () => {
-  const [link, setOnChangeLink] =  useState("https://www.youtube.com/embed/b-HZ1SZPaQw");
-  // const [link, setLink] = useState()
+  const [link, setLink] = useState("https://www.youtube.com/embed/b1t41Q3xRM8");
+  const [onChangeLink, setOnChnageLink] = useState();
 
-  const onBtnClick  = () =>{
-    console.log(link)
+  const onBtnClick = () => {
+    const videoID = youtube_parser(onChangeLink);
+    setLink(`https://www.youtube.com/embed/${videoID}`);
+  };
+
+  function youtube_parser(url) {
+    var regExp =
+      /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    var match = url.match(regExp);
+    return match && match[7].length === 11 ? match[7] : false;
   }
-
+  
   return (
     <div className="video widgets">
       <div className="video-wrapper">
@@ -21,11 +29,11 @@ const Video = () => {
           allowFullScreen
         ></iframe>
       </div>
-      <input onChange={(e)=> setOnChangeLink(e.target.value)}></input>
+      <input onChange={(e) => setOnChnageLink(e.target.value)}></input>
       <button onClick={onBtnClick}>search</button>
     </div>
   );
 };
 
 export default Video;
-// https://youtu.be/b1t41Q3xRM8
+

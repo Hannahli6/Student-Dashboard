@@ -1,15 +1,18 @@
- *, *::before, *::after {
-  box-sizing: border-box;  
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 :root {
   --border-radius-component: 10px;
   --border-radius-profile: 50px;
   --dark: #474747;
-  --grey: #8B8F97;
+  --grey: #8b8f97;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   color: var(--dark);
@@ -17,11 +20,12 @@ html, body {
 
 .App {
   height: 100vh;
-  background-color: #D5DAE4;
-  font-family: 'Nunito', sans-serif;
+  background-color: #d5dae4;
+  font-family: "Nunito", sans-serif;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-size: 1em;
 }
 
@@ -31,16 +35,15 @@ h2, h3 {
   top: 50%;
   transform: translateY(-50%);
   max-width: 88%;
-  min-height: 88%;
+  height: 88%;
   margin: auto;
   border-radius: 40px;
 }
 
 .grid {
-  /* edit the first margin value after the nav component is added in */
+  box-sizing: border-box;
   padding: 3rem;
-  position: relative;
-  width: 100%;
+  height: 90%;
   display: grid;
   grid-template-columns: 0.9fr 1.6fr 0.7fr 0.8fr;
   grid-template-rows: 0.9fr 1.1fr 1fr 1fr;
@@ -49,14 +52,13 @@ h2, h3 {
   grid-template-areas:
     "calendar video task icons"
     "calendar video task todo"
-    "goal video music todo"
+    "goal timer music todo"
     "graph timer music todo";
 }
-.widgets{
+.widgets {
   background-color: red;
   border-radius: 20px;
   box-sizing: border-box;
-  padding: 40px;
 }
 
 .calendar {
@@ -95,21 +97,4 @@ h2, h3 {
 .icons {
   grid-area: icons;
   background-color: #bcece9;
-}
-/* 
-.video {
-  grid-area: video;
-  background-color: #f5b0b5;
-}
-.video-wrapper {
-  background: rgb(255, 255, 255);
-  border-radius: 20px;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-} */
-
-.timer {
-  grid-area: timer;
-  background-color: #9699d1;
 }

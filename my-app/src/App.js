@@ -1,6 +1,7 @@
 import "./App.css";
 import Nav from "./components/Nav/Nav";
 import Video from "./components/Video/Video";
+import Timer from "./components/Timer/Timer";
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
           <div className="music widgets"></div>
           <div className="todo widgets"></div>
           <div className="icons widgets"></div>
-          <Video className="video widgets"></Video>
-          <div className="timer widgets"></div>
+          <Video></Video>
+          {/* <div className="timer widgets"></div> */}
+          <Timer></Timer>
           <div className="task widgets"></div>
         </div>
       </div>
